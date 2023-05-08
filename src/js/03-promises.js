@@ -25,11 +25,11 @@ form.addEventListener('submit', event => {
   for (let i = 1; i <= amount; i++) {
     createPromise(i, delay + (i - 1) * step)
       .then(({ position, delay }) => {
-        Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+        Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
         // console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
       })
       .catch(({ position, delay }) => {
-        Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+        Notify.failure(`Rejected promise ${position} in ${delay}ms`);
         // console.log(`❌ Rejected promise ${position} in ${delay}ms`);
       });
   }
